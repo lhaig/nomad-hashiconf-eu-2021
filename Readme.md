@@ -156,3 +156,8 @@ nomad job run -detach example-quota.nomad
 
 If you now go to the Nomad UI on `http://IPADDRESS-FOR-NOMAD-SERVER:4646/` you will see
 that the allocation is not fully deployed as the resource limit has been reached.
+
+You can also see the same data in the console using the cli by running
+```bash
+nomad status -namespace web-qa example
+```
