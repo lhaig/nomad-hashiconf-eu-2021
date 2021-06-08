@@ -4,7 +4,7 @@ job "example" {
   namespace = "web-qa"
   type = "service"
   group "cache" {
-    count = 1
+    count = 6
     network {
       port "db" {
         to = 6379
