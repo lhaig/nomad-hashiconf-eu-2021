@@ -149,7 +149,10 @@ nomad quota status web-qa
 ```
 Now we can increase the number of instances to 6 to use up our quota.
 We just increase the `count` parameter to 6, save the spec file and then run the job again.
-We use the `-detatch` switch to not enter monitor mode but just return the allocation number
+We use the `-detach` switch to not enter monitor mode but just return the allocation number
 ```bash
 nomad job run -detach example-quota.nomad
 ```
+
+If you now go to the Nomad UI on `http://IPADDRESS-FOR-NOMAD-SERVER:4646/` you will see
+that the allocation is not fully deployed as the resource limit has been reached.
